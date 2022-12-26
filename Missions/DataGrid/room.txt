@@ -1,0 +1,953 @@
+float version 0.070103
+CRoom actRoom
+{
+   int xSize 50
+   int ySize 37
+   string scriptName Custom/Missions/DataGrid/script.lua
+   string dlgFileName Custom/Missions/DataGrid/dialog.txt
+   string musicFileName Music/10.ogg
+   string imgBehindInterface Graphics/Iface/rooms_background/vr.png
+   CRoomGrRepresentation grRepres
+   {
+      int dX 15
+      int dY 15
+      bool vReality true
+      SBgRect bgRect
+      {
+         SPos size 5000;3700
+         string imgName Graphics/Envir/x36/Backgrounds/vr/background03.jpg
+         CColor color (96, 96, 96, 255)
+      }
+      SBgRect bgRect
+      {
+         SPos pos 600;300
+         SPos size 1300;1100
+         string imgName Graphics/Envir/x36/Backgrounds/vr/recycle.png
+         CColor color (192, 192, 192, 255)
+      }
+      SBgRect bgRect
+      {
+         SPos size 5000;3700
+         string imgName Graphics/Envir/x36/Backgrounds/vr/glow.png
+         int type 1
+         float density 7
+         float speed 0.5
+      }
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 50
+         int ySize 37
+         string fields 11111111111111111111111111111111111111111101101101110000000000000000000000110000000000000001011011011000000000000000000000000100000000000000010110110110000000000000000000000001000000000000000101101101100000000000000000000000010000000000000001011011011000000000000000000000000000000000000000010110110110000000000000000000000001000000000000000101101101100000000000000000000000010000000000000001011011011000000000000000000000000100000000000000010110110110000000000000000000000001000000000000000101101101100000000000000000000000011110111011101111011011011000000000000000000000000000000000000000000110110110000000000000000000000000000000000000000001101101100000000000000000000000000000000000000000011011011000000000000000000000000000000000000000000110110111000000000000000000000000000000000000000001101101111111111111111111111111111110111011101111011011011100000000000000000000000111101110111011110110110110000000000000000000000001111011101110111101101101100000000000000000000000000000000000000000000000001000000000000000000000000111101110111011110110110110000000000000000000000001111011101110111101101101100000000000000000000000011110111011101111011011011000000000000000000000000111101110111011110110110110000000000000000000000000000000000000000000000000100000000000000000000000011110111011101111011011011000000000000000000000000111101110111011110110110110000000000000000000000001111011101110111101101101100000000000000000000000000000000000000000000000001000000000000000000000000111101110111011110110110110000000000000000000000001111011101110111101101101100000000000000000000000011110111111101111011011011000000000000000000000000111111111111111110110110110000000000000000000000001111111000111111101101101100000000000000000000000000000000000000000000000001100000000000000000000000000000000000000000000000011111111111111111111111111111111111111111101101101
+      }
+      ERoomObjectType type rot_wall
+      EObjectWeight weight ow_static
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 0;0
+      bool selected false
+      bool lockedPosition true
+      bool lockedShape true
+      SBeamEmitor beam
+      {
+         SPos pos 28;10
+         EBeamType type bt_normal
+         EDirection dir dir_right
+         int al 1
+         int prevl 1
+      }
+      SBeamEmitor beam
+      {
+         SPos pos 32;10
+         EBeamType type bt_normal
+         EDirection dir dir_right
+         int al 1
+         int prevl 1
+      }
+      SBeamEmitor beam
+      {
+         SPos pos 36;10
+         EBeamType type bt_normal
+         EDirection dir dir_right
+         int al 1
+         int prevl 1
+      }
+      CGrRepresentation grRepres
+      {
+         CGrElContainer grElem
+         {
+            =
+            string constrCmd VR(192,96,32);
+         }
+         bool shared false
+      }
+   }
+   CCritter 
+   {
+      CShape shape
+      {
+         int xSize 1
+         int ySize 2
+         string fields 11
+      }
+      ERoomObjectType type rot_critter
+      EObjectWeight weight ow_swim
+      string scriptFileName 
+      string name colt
+      bool placed true
+      SPos pos 12;6
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      =
+      ECritterType critType ct_seahorse
+      ECritterClass critClass cc_fish
+      EDirection lookDir dir_left
+      EDirection stickDir dir_down
+      bool dead false
+   }
+   CCritter 
+   {
+      CShape shape
+      {
+         int xSize 4
+         int ySize 2
+         string fields 11111111
+      }
+      ERoomObjectType type rot_critter
+      EObjectWeight weight ow_swim
+      string scriptFileName 
+      string name flounder
+      bool placed true
+      SPos pos 13;25
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      =
+      ECritterType critType ct_big_fish
+      ECritterClass critClass cc_fish
+      EDirection lookDir dir_right
+      EDirection stickDir dir_down
+      bool dead false
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 1
+         int ySize 1
+         string fields 1
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_normal
+      string scriptFileName 
+      string name cube7
+      bool placed true
+      SPos pos 29;8
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      CGrRepresentation grRepres
+      {
+         CGrElSprite grElem
+         {
+            =
+            string fileName Graphics/Objects/x30/lemon1x1.png
+         }
+         bool shared false
+      }
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 1
+         int ySize 1
+         string fields 1
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_normal
+      string scriptFileName 
+      string name cube3
+      bool placed true
+      SPos pos 37;2
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      CGrRepresentation grRepres
+      {
+         CGrElSprite grElem
+         {
+            =
+            string fileName Graphics/Objects/x30/coin1_1x1.png
+         }
+         bool shared false
+      }
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 1
+         int ySize 1
+         string fields 1
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_normal
+      string scriptFileName 
+      string name cube8
+      bool placed true
+      SPos pos 33;8
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      CGrRepresentation grRepres
+      {
+         CGrElSprite grElem
+         {
+            =
+            string fileName Graphics/Objects/x30/toothwheel/0000.png
+         }
+         bool shared false
+      }
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 1
+         int ySize 1
+         string fields 1
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_normal
+      string scriptFileName 
+      string name cube5
+      bool placed true
+      SPos pos 33;6
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      CGrRepresentation grRepres
+      {
+         CGrElSprite grElem
+         {
+            =
+            string fileName Graphics/Objects/x30/perl-blue1x1.png
+         }
+         bool shared false
+      }
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 1
+         int ySize 1
+         string fields 1
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_normal
+      string scriptFileName 
+      string name cube4
+      bool placed true
+      SPos pos 29;6
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      CGrRepresentation grRepres
+      {
+         CGrElSprite grElem
+         {
+            =
+            string fileName Graphics/Objects/x30/jingle1x1.png
+         }
+         bool shared false
+      }
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 1
+         int ySize 1
+         string fields 1
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_normal
+      string scriptFileName 
+      string name cube6
+      bool placed true
+      SPos pos 37;6
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      CGrRepresentation grRepres
+      {
+         CGrElSprite grElem
+         {
+            =
+            string fileName Graphics/Objects/x30/tooth01.png
+         }
+         bool shared false
+      }
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 1
+         int ySize 1
+         string fields 1
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_normal
+      string scriptFileName 
+      string name cube9
+      bool placed true
+      SPos pos 37;8
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      CGrRepresentation grRepres
+      {
+         CGrElSprite grElem
+         {
+            =
+            string fileName Graphics/Objects/x30/10-cube1x1.png
+         }
+         bool shared false
+      }
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 1
+         int ySize 1
+         string fields 1
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_normal
+      string scriptFileName 
+      string name cube2
+      bool placed true
+      SPos pos 33;2
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      CGrRepresentation grRepres
+      {
+         CGrElSprite grElem
+         {
+            =
+            string fileName Graphics/Objects/x30/pristroj1x1.png
+         }
+         bool shared false
+      }
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 1
+         int ySize 1
+         string fields 1
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_normal
+      string scriptFileName 
+      string name cube1
+      bool placed true
+      SPos pos 29;2
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      CGrRepresentation grRepres
+      {
+         CGrElSprite grElem
+         {
+            =
+            string fileName Graphics/Objects/x30/rubin1x1.png
+         }
+         bool shared false
+      }
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 18
+         int ySize 9
+         string fields 000001111111111111000001000100010001000001011101110111100001000100010001111111110111011101100001000100010001000001011101110111000001000100010001000001110111011101
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_neutral
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 22;1
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      lint randSeed 3219721243
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 1
+         int ySize 2
+         string fields 11
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_normal
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 48;33
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      CGrRepresentation grRepres
+      {
+         CGrElSprite grElem
+         {
+            =
+            string fileName Graphics/Objects/x30/VRobject_2x1.png
+         }
+         bool shared false
+      }
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 1
+         int ySize 2
+         string fields 11
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_floating
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 48;35
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      lint randSeed 1362921472
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 1
+         int ySize 2
+         string fields 11
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_normal
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 45;33
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      CGrRepresentation grRepres
+      {
+         CGrElSprite grElem
+         {
+            =
+            string fileName Graphics/Objects/x30/VRobject_2x1.png
+         }
+         bool shared false
+      }
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 1
+         int ySize 2
+         string fields 11
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_normal
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 42;33
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      CGrRepresentation grRepres
+      {
+         CGrElSprite grElem
+         {
+            =
+            string fileName Graphics/Objects/x30/VRobject_2x1.png
+         }
+         bool shared false
+      }
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 1
+         int ySize 2
+         string fields 11
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_floating
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 42;35
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      lint randSeed 2143449088
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 1
+         int ySize 2
+         string fields 11
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_floating
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 45;35
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      lint randSeed 44470272
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 1
+         int ySize 1
+         string fields 1
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_heavy
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 42;0
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 1
+         int ySize 2
+         string fields 11
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_neutral
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 16;6
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      lint randSeed 84564521
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 1
+         int ySize 1
+         string fields 1
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_heavy
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 45;0
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 1
+         int ySize 1
+         string fields 1
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_heavy
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 48;0
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 1
+         int ySize 3
+         string fields 111
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_neutral
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 12;3
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      lint randSeed 353874238
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 2
+         int ySize 1
+         string fields 11
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_neutral
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 48;19
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      lint randSeed 3917131971
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 2
+         int ySize 1
+         string fields 11
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_neutral
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 45;24
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      lint randSeed 98765934
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 2
+         int ySize 1
+         string fields 11
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_neutral
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 42;28
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      lint randSeed 421297193
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 4
+         int ySize 1
+         string fields 1111
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_neutral
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 3;28
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      lint randSeed 432677237
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 1
+         int ySize 3
+         string fields 111
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_neutral
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 16;11
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      lint randSeed 351378373
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 1
+         int ySize 3
+         string fields 111
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_neutral
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 16;3
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      lint randSeed 2544378549
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 20
+         int ySize 3
+         string fields 100001000000000000001111111111111111111110000100000000000000
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_neutral
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 3;31
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      lint randSeed 412397241
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 3
+         int ySize 1
+         string fields 111
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_neutral
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 4;24
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      lint randSeed 127349671
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 1
+         int ySize 3
+         string fields 111
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_neutral
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 8;11
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      lint randSeed 2872438371
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 1
+         int ySize 2
+         string fields 11
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_neutral
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 8;9
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      lint randSeed 172264379
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 1
+         int ySize 2
+         string fields 11
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_neutral
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 12;9
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      lint randSeed 1278674253
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 1
+         int ySize 1
+         string fields 1
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_neutral
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 3;24
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      lint randSeed 1378921249
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 1
+         int ySize 2
+         string fields 11
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_neutral
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 8;6
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      lint randSeed 123712432
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 1
+         int ySize 3
+         string fields 111
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_neutral
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 12;11
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      lint randSeed 2782137837
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 4
+         int ySize 1
+         string fields 1111
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_neutral
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 3;20
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      lint randSeed 429712643
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 1
+         int ySize 3
+         string fields 111
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_neutral
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 8;3
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      lint randSeed 428723942
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 1
+         int ySize 2
+         string fields 11
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_neutral
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 16;9
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      lint randSeed 53453438
+   }
+   int activeCritter -1
+}
+

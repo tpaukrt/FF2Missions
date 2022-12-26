@@ -1,0 +1,473 @@
+float version 0.070103
+CRoom actRoom
+{
+   int xSize 23
+   int ySize 26
+   string scriptName Custom/Missions/IceCave/script.lua
+   string dlgFileName Custom/Missions/IceCave/dialog.txt
+   string musicFileName Music/6.ogg
+   string imgBehindInterface Graphics/Iface/rooms_background/ice.png
+   CRoomGrRepresentation grRepres
+   {
+      int dX 20
+      int dY 20
+      SBgRect bgRect
+      {
+         SPos size 2300;2600
+         string imgName Graphics/Envir/x36/Backgrounds/ice/background1.jpg
+      }
+      SBgRect bgRect
+      {
+         SPos size 2300;2600
+         int type 1
+         float density 2
+         float flatten 3
+         float speed 0.5
+      }
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 23
+         int ySize 26
+         string fields 1111111110000111111111111111000000000001111111110000001111000000011111000000110000000000001110000011000001100000001100000000000001000100011000000000000000000000111111000100000000001001111000000000000000010011100000000000000000100111000000001000001101001110000000000000001110011000000000000000001100110001100000000000001001100000000000000000000011000000000000000000001110000000000000000000011100000000000000000000001000000000000000000111110000000000000000000011100011111111111110000011000000001111100000000111000000000000000000001110000000000000000010111100111100011111101111111111111111111111111111
+      }
+      ERoomObjectType type rot_wall
+      EObjectWeight weight ow_static
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 0;0
+      bool selected false
+      bool lockedPosition true
+      bool lockedShape true
+      CGrRepresentation grRepres
+      {
+         CGrElContainer grElem
+         {
+            =
+            string constrCmd icerock2();
+         }
+         bool shared false
+      }
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 2
+         int ySize 3
+         string fields 101011
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_floating
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 3;21
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      lint randSeed 3873745311
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 3
+         int ySize 1
+         string fields 111
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_floating
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 7;18
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      lint randSeed 2143449082
+   }
+   CCritter 
+   {
+      CShape shape
+      {
+         int xSize 2
+         int ySize 1
+         string fields 11
+      }
+      ERoomObjectType type rot_critter
+      EObjectWeight weight ow_normal
+      string scriptFileName 
+      string name virgil
+      bool placed true
+      SPos pos 10;0
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      =
+      ECritterType critType ct_small_crab
+      ECritterClass critClass cc_crab
+      EDirection lookDir dir_left
+      EDirection stickDir dir_down
+      bool dead false
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 2
+         int ySize 3
+         string fields 110101
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_normal
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 9;17
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      CGrRepresentation grRepres
+      {
+         CGrElContainer grElem
+         {
+            =
+            string constrCmd frozenwood();
+         }
+         bool shared false
+      }
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 1
+         int ySize 2
+         string fields 11
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_normal
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 14;14
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      CGrRepresentation grRepres
+      {
+         CGrElContainer grElem
+         {
+            =
+            string constrCmd frozenwood();
+         }
+         bool shared false
+      }
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 1
+         int ySize 1
+         string fields 1
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_normal
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 11;9
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      CGrRepresentation grRepres
+      {
+         CGrElSprite grElem
+         {
+            =
+            string fileName Graphics/Objects/x30/snailshell1x1.png
+         }
+         bool shared false
+      }
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 5
+         int ySize 4
+         string fields 00010001100111011111
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_floating
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 4;12
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      lint randSeed 1362921478
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 3
+         int ySize 1
+         string fields 111
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_floating
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 11;10
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      lint randSeed 2743453740
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 3
+         int ySize 3
+         string fields 110011010
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_normal
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 10;6
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      CGrRepresentation grRepres
+      {
+         CGrElContainer grElem
+         {
+            =
+            string constrCmd frozenwood();
+         }
+         bool shared false
+      }
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 3
+         int ySize 1
+         string fields 111
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_floating
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 13;16
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      lint randSeed 1348453936
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 2
+         int ySize 2
+         string fields 0111
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_normal
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 3;4
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      CGrRepresentation grRepres
+      {
+         CGrElContainer grElem
+         {
+            =
+            string constrCmd frozenwood();
+         }
+         bool shared false
+      }
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 1
+         int ySize 1
+         string fields 1
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_normal
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 4;6
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      CGrRepresentation grRepres
+      {
+         CGrElSprite grElem
+         {
+            =
+            string fileName Graphics/Objects/x30/snailshell1x1.png
+         }
+         bool shared false
+      }
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 1
+         int ySize 2
+         string fields 11
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_normal
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 4;21
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      CGrRepresentation grRepres
+      {
+         CGrElContainer grElem
+         {
+            =
+            string constrCmd frozenwood();
+         }
+         bool shared false
+      }
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 2
+         int ySize 3
+         string fields 101110
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_normal
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 19;19
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      CGrRepresentation grRepres
+      {
+         CGrElContainer grElem
+         {
+            =
+            string constrCmd frozenwood();
+         }
+         bool shared false
+      }
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 1
+         int ySize 1
+         string fields 1
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_normal
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 19;22
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      CGrRepresentation grRepres
+      {
+         CGrElSprite grElem
+         {
+            =
+            string fileName Graphics/Objects/x30/snailshell1x1.png
+         }
+         bool shared false
+      }
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 3
+         int ySize 1
+         string fields 111
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_normal
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 8;24
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      CGrRepresentation grRepres
+      {
+         CGrElSprite grElem
+         {
+            =
+            string fileName Graphics/Objects/x30/skel3x1.png
+         }
+         bool shared false
+      }
+   }
+   CRoomObject 
+   {
+      CShape shape
+      {
+         int xSize 3
+         int ySize 1
+         string fields 111
+      }
+      ERoomObjectType type rot_item
+      EObjectWeight weight ow_normal
+      string scriptFileName 
+      string name 
+      bool placed true
+      SPos pos 14;3
+      bool selected false
+      bool lockedPosition false
+      bool lockedShape true
+      CGrRepresentation grRepres
+      {
+         CGrElContainer grElem
+         {
+            =
+            string constrCmd frozenwood();
+         }
+         bool shared false
+      }
+   }
+   int activeCritter -1
+}
+
